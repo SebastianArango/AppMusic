@@ -1,0 +1,15 @@
+<resources>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="colorPrimary">@color/Primary</item>
+        <item name="colorPrimaryDark">@color/Primary_Dark</item>
+        <item name="colorAccent">@color/Accent</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+
+</resources>
