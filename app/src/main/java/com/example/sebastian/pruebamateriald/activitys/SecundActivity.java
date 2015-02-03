@@ -1,9 +1,7 @@
-package com.example.sebastian.pruebamateriald;
+package com.example.sebastian.pruebamateriald.activitys;
 
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
-
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -11,10 +9,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
-import android.view.View;
-import android.widget.ImageButton;
-
 import com.astuetz.PagerSlidingTabStrip;
+import com.example.sebastian.pruebamateriald.R;
+import com.example.sebastian.pruebamateriald.fragments.AmigosFragment;
+import com.example.sebastian.pruebamateriald.fragments.DescatadosFragment;
+import com.example.sebastian.pruebamateriald.fragments.ProfileFragment;
 
 
 public class SecundActivity extends ActionBarActivity {
@@ -50,10 +49,8 @@ public class SecundActivity extends ActionBarActivity {
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
-        //        private final String[] TITLES = { "Categories", "Home", "Top Paid", "Top Free", "Top Grossing", "Top New Paid",
-//                "Top New Free", "Trending" };
-//El tamaño de el array de TITLES debe ser igual al No de los fragmentos.
-        private final String[] TITLES = {"citas", "pendientes", "preprospecto"};
+
+        private final String[] TITLES = {"Destacados", "Amigos",  "perfil"};
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -62,11 +59,11 @@ public class SecundActivity extends ActionBarActivity {
         public Fragment getItem(int arg0) {
             switch (arg0) {
                 case 0:
-                    return new PruebaFragment();
+                    return new DescatadosFragment();
                 case 1:
-                    return new PruebaFragment2();
+                    return new AmigosFragment();
                 case 2:
-                    return new PruebaFragment3();
+                    return new ProfileFragment();
                 default:
                     return null;
             }
@@ -81,15 +78,6 @@ public class SecundActivity extends ActionBarActivity {
             return TITLES[position];
         }
 
-//        @Override
-//        public int getCountTITLES() {
-//            return TITLES.length;
-//        }
-//
-//        @Override
-//        public Fragment getItem(int position) {
-//            return SuperAwesomeCardFragment.newInstance(position);
-//        }
 
     }
 }

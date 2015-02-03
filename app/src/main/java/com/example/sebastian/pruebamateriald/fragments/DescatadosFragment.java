@@ -1,4 +1,4 @@
-package com.example.sebastian.pruebamateriald;
+package com.example.sebastian.pruebamateriald.fragments;
 
 
 import android.os.Bundle;
@@ -8,13 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.sebastian.pruebamateriald.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PruebaFragment extends Fragment {
+public class DescatadosFragment extends Fragment {
 
-    public PruebaFragment() {
+    public DescatadosFragment() {
         // Required empty public constructor
     }
 
@@ -22,7 +24,7 @@ public class PruebaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_prueba, container, false);
+        return inflater.inflate(R.layout.fragment_destacados, container, false);
     }
 
 
